@@ -11,10 +11,6 @@ global.fetch = jest.fn(() =>
 test("submits application", async () => {
   render(<ApplyForm />);
 
-  fireEvent.change(screen.getByPlaceholderText(/reference id/i), {
-    target: { value: "job123" }
-  });
-
   fireEvent.change(screen.getByPlaceholderText(/first name/i), {
     target: { value: "Jane" }
   });
